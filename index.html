@@ -289,10 +289,52 @@
     }
 
     /* ── Responsive ── */
+
+    /* Large screens: 27"–31" */
+    @media (min-width: 1600px) {
+      .page { max-width: 920px; padding: 5rem 2rem 7rem; }
+      html { font-size: 19px; }
+      .portrait-wrap { width: 500px; height: 500px; }
+      h1 { font-size: 4.2rem; }
+      .tagline { font-size: 0.95rem; letter-spacing: 0.22em; }
+      .section-tag { font-size: 0.82rem; }
+    }
+
+    /* Medium-large: 15"–27" */
+    @media (min-width: 1280px) and (max-width: 1599px) {
+      .page { max-width: 840px; }
+      html { font-size: 18px; }
+    }
+
+    /* Tablet: 600px–768px */
+    @media (max-width: 768px) {
+      .page { padding: 2.5rem 1.4rem 4rem; }
+      h1 { font-size: clamp(1.9rem, 5.5vw, 2.8rem); }
+      .portrait-wrap { width: min(340px, 75vw); height: min(340px, 75vw); }
+      .nav-pills { gap: 0.5rem; }
+      .pill { padding: 0.5rem 1.1rem; font-size: 0.82rem; }
+      .welcome { font-size: 0.95rem; }
+      .interests { font-size: 0.88rem; }
+    }
+
+    /* Mobile: phones */
     @media (max-width: 480px) {
+      .page { padding: 2rem 1rem 3.5rem; }
+      h1 { font-size: clamp(1.6rem, 8vw, 2.2rem); }
+      .tagline { font-size: 0.72rem; letter-spacing: 0.12em; }
       .portrait-wrap { width: 72vw; height: 72vw; }
-      h1 { font-size: 2rem; }
-      .course-list li { flex-wrap: wrap; }
+      .nav-pills { flex-direction: column; align-items: center; gap: 0.5rem; }
+      .pill { width: 80%; justify-content: center; padding: 0.65rem 1rem; }
+      .welcome { font-size: 0.92rem; }
+      p { font-size: 0.92rem; }
+      .section-tag { font-size: 0.65rem; }
+      h2 { font-size: 1.25rem; }
+      .course-list li { flex-wrap: wrap; gap: 0.2rem; }
+      .course-link { margin-top: 0.2rem; }
+      .interests { font-size: 0.85rem; line-height: 1.9; }
+      .contact-list li { flex-direction: column; gap: 0.1rem; }
+      .contact-key { min-width: unset; }
+      section { padding: 2.5rem 0; }
     }
   </style>
 </head>

@@ -191,10 +191,41 @@
       text-align: center;
     }
 
+    /* Large screens: 27"–31" */
+    @media (min-width: 1600px) {
+      .page { max-width: 1060px; padding: 5rem 2rem 7rem; }
+      html { font-size: 19px; }
+      h1 { font-size: 2.8rem; }
+      .course-card { grid-template-columns: 1fr 280px; gap: 2.2rem; }
+      .course-title { font-size: 1.3rem; }
+      .course-desc { font-size: 1rem; }
+    }
+
+    /* Medium-large: 15"–27" */
+    @media (min-width: 1280px) and (max-width: 1599px) {
+      .page { max-width: 900px; }
+      html { font-size: 18px; }
+      .course-card { grid-template-columns: 1fr 240px; }
+    }
+
+    /* Tablet: 600px–768px */
+    @media (max-width: 768px) {
+      .page { padding: 2.5rem 1.4rem 4rem; }
+      h1 { font-size: 1.9rem; }
+      .course-card { grid-template-columns: 1fr 160px; gap: 1.2rem; }
+      .course-title { font-size: 1rem; }
+      .course-desc { font-size: 0.88rem; }
+      .course-meta { font-size: 0.75rem; }
+    }
+
+    /* Mobile: phones */
     @media (max-width: 520px) {
-      h1 { font-size: 1.7rem; }
+      .page { padding: 2rem 1rem 3.5rem; }
+      h1 { font-size: 1.6rem; }
       .course-card { grid-template-columns: 1fr; }
-      .course-poster { max-width: 180px; }
+      .course-poster { width: 100%; max-width: 100%; }
+      .course-title { font-size: 1.05rem; }
+      .section-tag { font-size: 0.65rem; }
     }
   </style>
 </head>
