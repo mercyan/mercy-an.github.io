@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Mercy An</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white:    #ffffff;
+      --text:     #3a3a3a;
+      --muted:    #aaaaaa;
+      --light:    #e8e8e8;
+      --accent:   #888888;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── Page wrapper ── */
+    .page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3.5rem 1.5rem 5rem;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* ── Tagline ── */
+    .tagline {
+      font-size: 0.82rem;
+      font-style: italic;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-bottom: 1.6rem;
+    }
+
+    /* ── Main heading ── */
+    h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      color: var(--text);
+      line-height: 1.15;
+      margin-bottom: 2rem;
+    }
+
+    /* ── Nav pills ── */
+    .nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.55rem 1.5rem;
+      border: 1.5px solid var(--light);
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: var(--text);
+      text-decoration: none;
+      background: transparent;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .pill:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .pill .icon { font-size: 0.85rem; }
+
+    /* ── Portrait ── */
+    .portrait-wrap {
+      width: min(420px, 80vw);
+      height: min(420px, 80vw);
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 2.8rem;
+    }
+
+    .portrait-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: grayscale(100%);
+      display: block;
+    }
+
+    /* ── Welcome ── */
+    .welcome {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--text);
+      margin-bottom: 4rem;
+      text-align: left;
+      width: 100%;
+      max-width: 520px;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      width: 100%;
+      border: none;
+      border-top: 1px solid var(--light);
+      margin: 0 0 3.5rem;
+    }
+
+    /* ── Sections ── */
+    section {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 4rem;
+      scroll-margin-top: 2rem;
+    }
+
+    .section-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .section-tag::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--light);
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: var(--text);
+      margin-bottom: 0.8rem;
+      font-style: italic;
+    }
+
+    p {
+      font-size: 0.97rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Course list ── */
+    .course-list {
+      list-style: none;
+      margin: 1.2rem 0 2rem;
+    }
+
+    .course-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--light);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .course-list li:first-child { border-top: 1px solid var(--light); }
+
+    .course-code {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      flex-shrink: 0;
+      min-width: 48px;
+      text-transform: uppercase;
+    }
+
+    .course-name { color: var(--text); flex: 1; }
+
+    .course-link {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--light);
+      flex-shrink: 0;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .course-link:hover { color: var(--text); border-color: var(--accent); }
+
+    /* ── Book project ── */
+    .book-title {
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    /* ── Interests ── */
+    .interests {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 2;
+    }
+
+    /* ── Contact ── */
+    .contact-list {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    .contact-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--light);
+      font-size: 0.95rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .contact-list li:first-child { border-top: 1px solid var(--light); }
+
+    .contact-key {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      flex-shrink: 0;
+      min-width: 90px;
+      padding-top: 0.1rem;
+    }
+
+    .contact-val { color: var(--text); }
+
+    .contact-val a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--light);
+      transition: border-color 0.2s;
+    }
+
+    .contact-val a:hover { border-color: var(--text); }
+
+    /* ── Education ── */
+    .edu-list { list-style: none; margin-top: 0.5rem; }
+
+    .edu-list li {
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--light);
+      font-size: 0.95rem;
+    }
+
+    .edu-list li:first-child { border-top: 1px solid var(--light); }
+
+    .edu-degree { color: var(--text); }
+
+    .edu-school {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.15rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 2rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .portrait-wrap { width: 72vw; height: 72vw; }
+      h1 { font-size: 2rem; }
+      .course-list li { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Tagline -->
+  <p class="tagline">critical &nbsp;|&nbsp; creative &nbsp;|&nbsp; caring</p>
+
+  <!-- Heading -->
+  <h1>Hi, I am Dr. Mercy An</h1>
+
+  <!-- Nav pills -->
+  <nav class="nav-pills">
+    <a class="pill" href="#teaching"><span class="icon">🤍</span> teaching</a>
+    <a class="pill" href="#researching"><span class="icon">🔑</span> researching</a>
+    <a class="pill" href="#connecting"><span class="icon">✉️</span> connecting</a>
+  </nav>
+
+  <!-- Portrait -->
+  <div class="portrait-wrap">
+    <img src="portrait.jpg" alt="Dr. Mercy An" />
+  </div>
+
+  <!-- Welcome -->
+  <p class="welcome" style="color: var(--muted);">Welcome. I am glad you are here.</p>
+
+  <hr class="divider" />
+
+  <!-- Teaching -->
+  <section id="teaching">
+    <p class="section-tag">teaching</p>
+
+    <p>
+      My teaching is rooted in the Humanities broadly and takes a cross-cultural approach,
+      drawing on Sinophone, Russophone, and Japanophone traditions. With a focus on Chinese
+      and comparative literature, East Asian ecocriticism, and the intersections of gender,
+      environment, and modernity, I am committed to multilingual justice, student mental health,
+      and community-based learning.
+    </p>
+
+    <br>
+
+    <h2>2025–2026 Courses at Colorado College &nbsp;<a href="courses.html" style="font-family:'DM Sans',sans-serif; font-size:0.78rem; font-style:normal; color:var(--muted); text-decoration:none; border-bottom:1px solid var(--light);">view all ↗</a></h2>
+    <ul class="course-list">
+      <li>
+        <span class="course-code">PA 111</span>
+        <span class="course-name">Introduction to Asian Studies</span>
+      </li>
+      <li>
+        <span class="course-code">PA 250</span>
+        <span class="course-name">Topics: Animals, Plants, and Monsters</span>
+      </li>
+      <li>
+        <span class="course-code">PA 250</span>
+        <span class="course-name">Topics: Gender and Feminism in Asia</span>
+      </li>
+      <li>
+        <span class="course-code">PA 250</span>
+        <span class="course-name">Topics: Pop Culture in Asia</span>
+      </li>
+      <li>
+        <span class="course-code">PA 250</span>
+        <span class="course-name">Topics: Reimagining Asia through China and Russia</span>
+      </li>
+    </ul>
+
+    <br>
+
+    <h2>Sample Syllabi</h2>
+    <ul class="course-list">
+      <li>
+        <span class="course-name">Introduction to Asian Studies</span>
+        <a class="course-link" href="PA111%20Introduction%20to%20Asian%20Studies.pdf" target="_blank">view ↗</a>
+      </li>
+      <li>
+        <span class="course-name">Animals, Plants, and Monsters</span>
+        <a class="course-link" href="Syllabus_2025_Block5_An.pdf" target="_blank">view ↗</a>
+      </li>
+      <li>
+        <span class="course-name">Pop Culture in Asia</span>
+        <a class="course-link" href="Syllabus_2025_Block6_An.pdf" target="_blank">view ↗</a>
+      </li>
+    </ul>
+
+    <br>
+
+    <h2>Sample Assignments</h2>
+    <ul class="course-list">
+      <li>
+        <span class="course-name">Creative Interpretation · Zoo Field Trip Writing · Literary Analysis Essay</span>
+        <a class="course-link" href="sample-assignments.pdf" target="_blank">view ↗</a>
+      </li>
+    </ul>
+
+    <br>
+
+    <h2>Resources for Students</h2>
+    <ul class="course-list">
+      <li>
+        <span class="course-name">Writing Workshop Materials</span>
+        <a class="course-link" href="sample-activities.pdf" target="_blank">view ↗</a>
+      </li>
+    </ul>
+
+    <p style="font-size:0.85rem; color: var(--muted); font-style: italic; margin-top: 1.5rem;">
+      Students interested in my courses or seeking guidance are warmly encouraged to reach out by email.
+    </p>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Researching -->
+  <section id="researching">
+    <p class="section-tag">researching</p>
+
+    <h2>Book Project</h2>
+    <p>
+      <span class="book-title">Ecologizing Modernism: Writing with the Nonhuman in Manchuria</span>
+      takes Manchuria — a critical borderland of modern East Asia — as a site of dynamic
+      human–nonhuman interactions from the 1910s through the 1940s. Reading Sinophone and
+      Russophone authors side by side, the study uncovers how Chinese <em>xiangtu</em> writers
+      and Russian writer-naturalists engaged in interrelated ecocritical efforts to forge ethical
+      relations with the nonhuman world. The nonhuman Other emerges as a co-author who disrupts
+      conventional colonial-resistance binaries in the transnational literary landscape.
+    </p>
+
+    <br>
+
+    <h2>Research Interests</h2>
+    <p class="interests">
+      Chinese Language &amp; Literature &nbsp;·&nbsp;
+      Russian Language &amp; Literature &nbsp;·&nbsp;
+      Environmental Humanities &nbsp;·&nbsp;
+      Women &amp; Gender Studies &nbsp;·&nbsp;
+      Comparative Literature &nbsp;·&nbsp;
+      Literary Theory &amp; Criticism &nbsp;·&nbsp;
+      East Asian Ecocriticism &nbsp;·&nbsp;
+      Sino-Russian Comparative Literature &nbsp;·&nbsp;
+      Popular Culture of East Asia
+    </p>
+
+    <br>
+
+    <h2>Education</h2>
+    <ul class="edu-list">
+      <li>
+        <div class="edu-degree">Ph.D., Comparative Thought and Literature</div>
+        <div class="edu-school">Johns Hopkins University &nbsp;·&nbsp; 2025</div>
+      </li>
+      <li>
+        <div class="edu-degree">M.A., Russian Language and Literature</div>
+        <div class="edu-school">Peking University, China &nbsp;·&nbsp; 2019</div>
+      </li>
+      <li>
+        <div class="edu-degree">B.A., Russian &nbsp;&amp;&nbsp; B.A., Economics</div>
+        <div class="edu-school">Peking University, China &nbsp;·&nbsp; 2016</div>
+      </li>
+    </ul>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- Connecting -->
+  <section id="connecting">
+    <p class="section-tag">connecting</p>
+
+    <p>I would love to hear from you.</p>
+
+    <ul class="contact-list">
+      <li>
+        <span class="contact-key">Email</span>
+        <span class="contact-val"><a href="mailto:man2025@coloradocollege.edu">man2025@coloradocollege.edu</a></span>
+      </li>
+      <li>
+        <span class="contact-key">Phone</span>
+        <span class="contact-val">(719) 389-6964</span>
+      </li>
+      <li>
+        <span class="contact-key">Office</span>
+        <span class="contact-val">Interdisciplinary House, Room 201 &nbsp;·&nbsp; Colorado College</span>
+      </li>
+      <li>
+        <span class="contact-key">Office Hours</span>
+        <span class="contact-val">Tuesdays, 3–5 PM</span>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Mengqi "Mercy" An &nbsp;(安梦琪)&nbsp; · &nbsp;© 2026</p>
+  </footer>
+
+</div>
+</body>
+</html>
