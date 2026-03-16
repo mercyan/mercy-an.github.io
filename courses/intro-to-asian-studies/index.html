@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to Asian Studies</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/courses/" class="site-title">Mengqi An &middot; Courses</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('nav ul').classList.toggle('open')">&#9776;</button>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="readings.html">Readings</a></li>
+      <li><a href="assignments.html">Assignments</a></li>
+      <li><a href="policies.html">Policies</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero hero-image">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Introduction to Asian Studies</h1>
+    <p class="tagline">"Asia" is not a fixed geography on a map, but a fluid and contested entity with porous borders and vibrant lines of intersection.</p>
+  </div>
+  <p class="hero-credit">Image: <em>Man Sitting on a Bridge in a Misty Mountain Landscape</em>, The Walters Art Museum via Unsplash</p>
+</header>
+
+<main class="container">
+
+  <!-- Quick Links with Custom SVG Icons -->
+  <div class="quick-links">
+    <a href="schedule.html" class="quick-link">
+      <div class="icon-wrap">
+        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Scroll/calendar icon -->
+          <rect x="10" y="8" width="36" height="40" rx="4" fill="#e8f2ee" stroke="#6b9e8f" stroke-width="2"/>
+          <path d="M18 6v6M38 6v6" stroke="#6b9e8f" stroke-width="2" stroke-linecap="round"/>
+          <line x1="10" y1="20" x2="46" y2="20" stroke="#6b9e8f" stroke-width="1.5"/>
+          <circle cx="22" cy="28" r="2.5" fill="#c94c4c"/>
+          <circle cx="34" cy="28" r="2.5" fill="#6b9e8f"/>
+          <circle cx="22" cy="38" r="2.5" fill="#6b9e8f"/>
+          <circle cx="34" cy="38" r="2.5" fill="#c9a84c"/>
+          <!-- Decorative wave at bottom -->
+          <path d="M12 46 Q20 42 28 46 Q36 50 44 46" stroke="#6b9e8f" stroke-width="1" opacity="0.4" fill="none"/>
+        </svg>
+      </div>
+      <div class="label">Schedule</div>
+      <div class="desc">Daily plan across 4 weeks</div>
+    </a>
+    <a href="readings.html" class="quick-link">
+      <div class="icon-wrap">
+        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Open book with pages -->
+          <path d="M28 14 Q20 10 10 12 L10 42 Q20 40 28 44 Q36 40 46 42 L46 12 Q36 10 28 14Z" fill="#e8f2ee" stroke="#6b9e8f" stroke-width="2"/>
+          <line x1="28" y1="14" x2="28" y2="44" stroke="#6b9e8f" stroke-width="1.5"/>
+          <!-- Text lines left page -->
+          <line x1="14" y1="20" x2="24" y2="20" stroke="#6b9e8f" stroke-width="1" opacity="0.5"/>
+          <line x1="14" y1="25" x2="22" y2="25" stroke="#6b9e8f" stroke-width="1" opacity="0.5"/>
+          <line x1="14" y1="30" x2="24" y2="30" stroke="#6b9e8f" stroke-width="1" opacity="0.5"/>
+          <line x1="14" y1="35" x2="20" y2="35" stroke="#6b9e8f" stroke-width="1" opacity="0.5"/>
+          <!-- Ink brush stroke accent -->
+          <path d="M32 22 Q36 20 42 22" stroke="#c94c4c" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+          <path d="M32 28 Q38 26 42 28" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          <!-- Small seal stamp -->
+          <rect x="36" y="33" width="6" height="6" rx="1" fill="#c94c4c" opacity="0.25"/>
+        </svg>
+      </div>
+      <div class="label">Readings</div>
+      <div class="desc">Texts, films &amp; media</div>
+    </a>
+    <a href="assignments.html" class="quick-link">
+      <div class="icon-wrap">
+        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Clipboard body -->
+          <rect x="12" y="12" width="32" height="38" rx="3" fill="#e8f2ee" stroke="#6b9e8f" stroke-width="2"/>
+          <!-- Clipboard clip -->
+          <rect x="21" y="8" width="14" height="8" rx="2" fill="#6b9e8f" opacity="0.4"/>
+          <rect x="24" y="6" width="8" height="5" rx="2.5" fill="none" stroke="#6b9e8f" stroke-width="1.5"/>
+          <!-- Checkmark 1 -->
+          <path d="M18 24 l2.5 2.5 5-5" stroke="#6b9e8f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="30" y1="23" x2="38" y2="23" stroke="#6b9e8f" stroke-width="1.2" opacity="0.5"/>
+          <!-- Checkmark 2 -->
+          <path d="M18 33 l2.5 2.5 5-5" stroke="#c94c4c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="30" y1="32" x2="36" y2="32" stroke="#6b9e8f" stroke-width="1.2" opacity="0.5"/>
+          <!-- Pending item 3 -->
+          <circle cx="20.5" cy="41" r="2" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+          <line x1="30" y1="41" x2="37" y2="41" stroke="#6b9e8f" stroke-width="1.2" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="label">Assignments</div>
+      <div class="desc">Essays, projects &amp; proposal</div>
+    </a>
+    <a href="policies.html" class="quick-link">
+      <div class="icon-wrap">
+        <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Compass / balance -->
+          <circle cx="28" cy="28" r="18" fill="#e8f2ee" stroke="#6b9e8f" stroke-width="2"/>
+          <circle cx="28" cy="28" r="3" fill="#6b9e8f"/>
+          <!-- Compass needle -->
+          <path d="M28 12 L30 26 L28 28 L26 26 Z" fill="#c94c4c" opacity="0.7"/>
+          <path d="M28 44 L30 30 L28 28 L26 30 Z" fill="#1a1a2e" opacity="0.3"/>
+          <!-- Cardinal marks -->
+          <circle cx="28" cy="12" r="1.5" fill="#c94c4c" opacity="0.5"/>
+          <circle cx="44" cy="28" r="1.5" fill="#6b9e8f" opacity="0.5"/>
+          <circle cx="28" cy="44" r="1.5" fill="#6b9e8f" opacity="0.5"/>
+          <circle cx="12" cy="28" r="1.5" fill="#6b9e8f" opacity="0.5"/>
+          <!-- Outer ring decoration -->
+          <circle cx="28" cy="28" r="21" fill="none" stroke="#6b9e8f" stroke-width="0.5" opacity="0.3"/>
+        </svg>
+      </div>
+      <div class="label">Policies</div>
+      <div class="desc">Guidelines &amp; community</div>
+    </a>
+  </div>
+
+  <!-- Course Description -->
+  <div class="section-card">
+    <h2>About This Course</h2>
+    <p>This course opens multiple pathways for studying Asia&mdash;across disciplines, national borders, and historical periods. We draw on methods from anthropology, history, politics, cultural studies, and beyond.</p>
+    <p>Moving from K-pop to shamanic rituals, from nation-building projects to environmental struggles and everyday acts of care, we work with visual and textual sources, museum objects and archival documents, maps, films, literature, and lived experiences.</p>
+    <p>We trace how "Asia," in all its diverse yet deeply interconnected parts, has come to be shaped by empire and war, trade and migration, religious encounters, gendered and sexual politics, popular culture, and global capitalism. Grounding our learning in specific local contexts, we unsettle simple West&ndash;Rest binaries and cultivate cross-cultural curiosity and accountability.</p>
+  </div>
+
+  <!-- Learning Objectives (shortened) -->
+  <div class="section-card">
+    <h2>Learning Objectives</h2>
+    <div class="objectives-grid">
+      <div class="obj-item">
+        <span class="obj-num">1</span>
+        Understand Asia as a fluid, interconnected, and historically shaped region.
+      </div>
+      <div class="obj-item">
+        <span class="obj-num">2</span>
+        Engage critically with debates on representation, power, empire, gender, and knowledge production.
+      </div>
+      <div class="obj-item">
+        <span class="obj-num">3</span>
+        Practice close reading and watching across texts, films, maps, and museum objects.
+      </div>
+      <div class="obj-item">
+        <span class="obj-num">4</span>
+        Reflect on how power and positionality shape knowledge across cultures.
+      </div>
+      <div class="obj-item">
+        <span class="obj-num">5</span>
+        Connect global questions to local contexts, including here in Colorado.
+      </div>
+      <div class="obj-item">
+        <span class="obj-num">6</span>
+        Develop interdisciplinary thinking across anthropology, history, literature, and politics.
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Thematic Map -->
+  <div class="map-section" id="explore-map">
+    <h2>Explore the Course</h2>
+    <p class="map-subtitle">Hover over highlighted regions to discover the themes and topics we explore.</p>
+
+    <div class="map-container">
+      <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" id="asia-map">
+        <defs>
+          <style>
+            .land { fill: #d8d0c4; stroke: #c5bdb0; stroke-width: 0.5; }
+            .water { fill: #dce8e4; }
+            .map-region { cursor: pointer; transition: opacity 0.3s, filter 0.3s; }
+            .map-region:hover { opacity: 1 !important; filter: brightness(1.1) saturate(1.2); }
+            .region-label { pointer-events: none; font-family: 'Inter', sans-serif; font-weight: 600; }
+          </style>
+        </defs>
+
+        <!-- Ocean background -->
+        <rect width="1000" height="500" class="water" rx="12"/>
+
+        <!-- === NON-INTERACTIVE CONTINENTS (greyed land) === -->
+
+        <!-- North America -->
+        <path class="land" d="M80 50 L130 40 L170 55 L200 45 L230 60 L245 50 L260 70 L250 100 L235 120 L250 140 L240 160 L220 170 L210 190 L195 200 L180 220 L170 235 L155 230 L140 245 L130 235 L115 225 L110 210 L95 200 L85 180 L75 155 L70 130 L65 110 L70 80Z"/>
+        <!-- Greenland -->
+        <path class="land" d="M270 30 L310 25 L330 40 L325 65 L305 75 L280 70 L265 55Z"/>
+        <!-- South America -->
+        <path class="land" d="M175 270 L195 260 L215 265 L230 280 L240 300 L245 325 L240 355 L230 380 L215 400 L200 415 L185 425 L175 410 L170 385 L165 360 L160 335 L155 310 L160 290Z"/>
+        <!-- Europe -->
+        <path class="land" d="M430 55 L450 50 L470 55 L490 48 L510 55 L520 70 L515 85 L505 95 L495 105 L480 108 L465 102 L455 95 L440 90 L430 80 L425 65Z"/>
+        <!-- Africa -->
+        <path class="land" d="M440 145 L460 140 L480 145 L500 155 L510 175 L515 200 L510 230 L505 260 L495 285 L480 300 L465 310 L450 305 L440 290 L435 265 L430 240 L425 215 L420 190 L425 165Z"/>
+        <!-- Australia -->
+        <path class="land" d="M770 330 L810 325 L840 335 L855 350 L850 370 L835 385 L810 390 L785 385 L770 370 L765 350Z"/>
+        <!-- Antarctica hint -->
+        <path class="land" d="M300 480 L400 475 L500 478 L600 475 L700 480 L650 490 L550 492 L450 490 L350 492Z" opacity="0.3"/>
+
+        <!-- === INTERACTIVE ASIAN REGIONS === -->
+
+        <!-- Central Asia -->
+        <path class="map-region" data-region="central-asia"
+              d="M530 95 L570 85 L610 90 L635 100 L640 120 L630 140 L605 148 L575 145 L545 135 L530 115Z"
+              fill="#c9a84c" opacity="0.7" stroke="#fff" stroke-width="1.5"/>
+        <text x="583" y="122" text-anchor="middle" class="region-label" font-size="8.5" fill="#1a1a2e" opacity="0.85">Central Asia</text>
+
+        <!-- South Asia (India subcontinent) -->
+        <path class="map-region" data-region="south-asia"
+              d="M610 155 L640 148 L660 158 L670 180 L665 210 L655 240 L640 260 L625 255 L615 235 L605 210 L600 185 L602 165Z"
+              fill="#5dade2" opacity="0.6" stroke="#fff" stroke-width="1.5"/>
+        <text x="636" y="205" text-anchor="middle" class="region-label" font-size="8.5" fill="#1a1a2e" opacity="0.85">South Asia</text>
+
+        <!-- East Asia (China) -->
+        <path class="map-region" data-region="east-asia"
+              d="M645 90 L700 80 L740 90 L760 105 L765 130 L755 160 L740 180 L720 195 L695 200 L670 195 L650 180 L640 155 L635 130 L638 105Z"
+              fill="#6b9e8f" opacity="0.7" stroke="#fff" stroke-width="1.5"/>
+        <text x="700" y="145" text-anchor="middle" class="region-label" font-size="10" fill="#1a1a2e" opacity="0.85">East Asia</text>
+
+        <!-- Korea -->
+        <path class="map-region" data-region="korea"
+              d="M762 120 L772 115 L778 125 L776 148 L770 160 L762 155 L758 140 L759 128Z"
+              fill="#9b59b6" opacity="0.65" stroke="#fff" stroke-width="1.5"/>
+        <text x="790 " y="143" text-anchor="start" class="region-label" font-size="7.5" fill="#9b59b6" opacity="0.9">Korea</text>
+
+        <!-- Japan -->
+        <path class="map-region" data-region="japan"
+              d="M785 105 L792 98 L798 108 L796 128 L792 148 L786 160 L780 168 L776 162 L778 145 L780 125 L782 112Z"
+              fill="#c94c4c" opacity="0.6" stroke="#fff" stroke-width="1.5"/>
+        <text x="805" y="130" text-anchor="start" class="region-label" font-size="7.5" fill="#c94c4c" opacity="0.9">Japan</text>
+
+        <!-- Southeast Asia -->
+        <path class="map-region" data-region="southeast-asia"
+              d="M700 200 L730 195 L755 205 L770 220 L780 245 L790 270 L775 290 L755 295 L735 285 L715 270 L700 255 L690 235 L685 215Z"
+              fill="#e8946b" opacity="0.6" stroke="#fff" stroke-width="1.5"/>
+        <text x="738" y="248" text-anchor="middle" class="region-label" font-size="8.5" fill="#1a1a2e" opacity="0.85">Southeast Asia</text>
+
+        <!-- === COLORADO MARKER === -->
+        <g class="map-region" data-region="colorado" style="cursor:pointer">
+          <!-- Pulsing rings -->
+          <circle cx="155" cy="145" r="12" fill="#c94c4c" opacity="0.1">
+            <animate attributeName="r" values="12;18;12" dur="2.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.1;0.0;0.1" dur="2.5s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="155" cy="145" r="7" fill="#c94c4c" opacity="0.25"/>
+          <circle cx="155" cy="145" r="3.5" fill="#c94c4c" opacity="0.8"/>
+        </g>
+        <text x="155" y="167" text-anchor="middle" class="region-label" font-size="7.5" fill="#c94c4c" opacity="0.9">Colorado</text>
+
+        <!-- Connection arc from Colorado to Asia -->
+        <path d="M168 145 Q400 40 580 120" stroke="#c94c4c" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.2" fill="none"/>
+        <path d="M168 148 Q450 80 640 205" stroke="#c94c4c" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.15" fill="none"/>
+
+        <!-- Compass rose -->
+        <g transform="translate(940,40)" opacity="0.25">
+          <circle cx="0" cy="0" r="16" fill="none" stroke="#1a1a2e" stroke-width="0.7"/>
+          <line x1="0" y1="-18" x2="0" y2="18" stroke="#1a1a2e" stroke-width="0.7"/>
+          <line x1="-18" y1="0" x2="18" y2="0" stroke="#1a1a2e" stroke-width="0.7"/>
+          <text x="0" y="-21" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#1a1a2e">N</text>
+        </g>
+      </svg>
+
+      <div class="map-tooltip" id="map-tooltip"></div>
+    </div>
+
+    <div class="map-legend">
+      <div class="legend-item"><span class="legend-dot" style="background:#6b9e8f"></span> East Asia</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#c94c4c"></span> Japan</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#9b59b6"></span> Korea</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#5dade2"></span> South Asia</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#e8946b"></span> Southeast Asia</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#c9a84c"></span> Central Asia</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#c94c4c"></span> Colorado</div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Mengqi An &nbsp;&bull;&nbsp; <a href="https://mengqi-an.me">mengqi-an.me</a></p>
+</footer>
+
+<script>
+// Interactive Map
+const regionData = {
+  'east-asia': {
+    title: 'East Asia',
+    desc: 'China, Taiwan, and the broader Sinophone world',
+    topics: 'Cultural Revolution, Chinese literature (The King of Trees, Zhuangzi), gendered modernity (New Woman in Republican China), environmental philosophy, mapping & cartographic power'
+  },
+  'japan': {
+    title: 'Japan',
+    desc: 'From Meiji restoration to postwar innovation',
+    topics: 'Meiji & Taishō modernization, settler colonialism in Hokkaido, Honda & postwar industry, modern Japanese literature (Shimizu Shikin), Enola Gay & war narratives'
+  },
+  'korea': {
+    title: 'Korea',
+    desc: 'K-pop, shamanism, and militarized modernity',
+    topics: 'Global K-pop & soft masculinity, Korean shamanism (KPop Demon Hunters), militarized modernity & gendered citizenship, the Korean Wave (Hallyu)'
+  },
+  'south-asia': {
+    title: 'South Asia',
+    desc: 'Hindu art, diaspora, and postcolonial thought',
+    topics: 'Hindu gods & Tibetan Buddhism (Denver Art Museum), crossing borders (Gayatri Spivak), area studies & knowledge production, citizenship & belonging'
+  },
+  'southeast-asia': {
+    title: 'Southeast Asia',
+    desc: 'Queerness, ecology, and spiritual traditions',
+    topics: 'Queering Asia (Out Run, Philippines), babaylan & bayot traditions, Buddhist ecology (tree ordination in Thailand), environmental challenges, deforestation'
+  },
+  'central-asia': {
+    title: 'Central Asia',
+    desc: 'Water, energy, and environmental humanities',
+    topics: 'Water & energy security (World Bank), Russian settler colonialism, environmental humanities, ecological practices at the margins'
+  },
+  'colorado': {
+    title: 'Colorado Connections',
+    desc: 'Asian American history right here',
+    topics: 'Denver Art Museum Asian art collection, Amache Japanese internment camp, disappearance of Denver\'s Chinatown, AAPI archives at History Colorado Center'
+  }
+};
+
+const tooltip = document.getElementById('map-tooltip');
+const mapContainer = document.querySelector('.map-container');
+
+document.querySelectorAll('.map-region').forEach(region => {
+  region.addEventListener('mouseenter', (e) => {
+    const data = regionData[region.dataset.region];
+    if (!data) return;
+    tooltip.innerHTML = `<h4>${data.title}</h4><p>${data.desc}</p><p class="topics">${data.topics}</p>`;
+    tooltip.classList.add('active');
+  });
+
+  region.addEventListener('mousemove', (e) => {
+    const rect = mapContainer.getBoundingClientRect();
+    let x = e.clientX - rect.left + 15;
+    let y = e.clientY - rect.top - 10;
+    if (x + 300 > rect.width) x = x - 330;
+    if (y + 150 > rect.height) y = y - 150;
+    tooltip.style.left = x + 'px';
+    tooltip.style.top = y + 'px';
+  });
+
+  region.addEventListener('mouseleave', () => {
+    tooltip.classList.remove('active');
+  });
+
+  // Touch support
+  region.addEventListener('click', (e) => {
+    const data = regionData[region.dataset.region];
+    if (!data) return;
+    tooltip.innerHTML = `<h4>${data.title}</h4><p>${data.desc}</p><p class="topics">${data.topics}</p>`;
+    const rect = mapContainer.getBoundingClientRect();
+    let x = e.clientX - rect.left + 15;
+    let y = e.clientY - rect.top - 10;
+    if (x + 300 > rect.width) x = x - 330;
+    tooltip.style.left = x + 'px';
+    tooltip.style.top = y + 'px';
+    tooltip.classList.toggle('active');
+  });
+});
+</script>
+
+</body>
+</html>
